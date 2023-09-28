@@ -1,0 +1,8 @@
+
+
+GET http://localhost:3000/ping HTTP/1.1
+Host: localhost:3000
+Connection: keep-alive
+Accept: */*
+User-Agent: curl/7.54.0
+```
