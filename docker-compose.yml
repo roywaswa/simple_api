@@ -1,0 +1,17 @@
+version: '3'
+services:
+  express-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./simple_api:/app
+    environment:
+      - NODE_ENV=production
+    networks:
+      - nginxproxymanager_default
+networks:
+  nginxproxymanager_default:
+    external: true
